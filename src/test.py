@@ -36,7 +36,6 @@ class MatplotlibGTKWindow:
         self.window.connect("delete-event", Gtk.main_quit)
         self.window.set_default_size(800, 600)
         self.window.set_title("Embedding in GTK - Updated")
-        
         self.setup_ui()
         
     def setup_ui(self):
