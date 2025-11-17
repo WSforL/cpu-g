@@ -37,17 +37,17 @@ class MatplotlibGTKWindow:
         self.window.set_default_size(800, 600)
         self.window.set_title("Embedding in GTK - Updated")
         self.setup_ui()
-        
+
     def setup_ui(self):
         # Create scrolled window
         sw = Gtk.ScrolledWindow()
         sw.set_border_width(10)
         sw.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
-        
+
         # Create matplotlib figure and plot
         self.figure = Figure(figsize=(5, 4), dpi=100)
         self.axes = self.figure.add_subplot(111)
-        
+
         # Sample data
         t = [1, 2, 3, 4]
         s = [1, 4, 9, 16]
@@ -56,17 +56,17 @@ class MatplotlibGTKWindow:
         self.axes.set_ylabel('Value')
         self.axes.set_title('Sample Plot')
         self.axes.grid(True)
-        
+
         # Create canvas
         self.canvas = FigureCanvas(self.figure)
         self.canvas.set_size_request(600, 400)
-        
+
         # Add canvas to scrolled window
         sw.add(self.canvas)
-        
+
         # Add scrolled window to main window
         self.window.add(sw)
-        
+
     def show(self):
         self.window.show_all()
         Gtk.main()
