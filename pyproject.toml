@@ -20,7 +20,7 @@ dependencies = [
     "pygobject>=3.54.5",
     "pyparsing>=3.2.5",
     "python-dateutil>=2.9.0.post0",
-    "six>=.17.0",
+    "six>=1.17.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
